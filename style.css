@@ -193,7 +193,7 @@ margin-bottom:2%;
 
 
 
-@media(max-width:1448px){
+@media(min-width:1448px){
     .menu-section-content{
     grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));
     display: grid;
