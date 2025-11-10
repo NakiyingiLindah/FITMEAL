@@ -179,6 +179,7 @@ contactType:"CustomerCare"
     <img src="images/logo.png" alt="logo image">
     </div>
 <nav class="nav">
+   <span class="close-btn">&times;</span> <!--close button-->
  <a href="#hero">HOME</a>
  <a href="#about">ABOUT</a>
  <a href="#menu">MENU</a>
@@ -327,8 +328,14 @@ contactType:"CustomerCare"
 <script>
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
+const closebtn = document.querySelector('.close-btn')
+
 hamburger.addEventListener('click', () =>{
-  nav.classList.toggle('active');
+  nav.classList.toggle('active');    // opening nav
+});
+
+closebtn.addEventListener('click', () =>{
+   nav.classList.remove('active'); //closing nav
 });
 
 </script>

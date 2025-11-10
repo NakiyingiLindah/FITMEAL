@@ -63,22 +63,35 @@ body {
     
 }
 
-@media (max-width:768px){
+.close-btn{
+    display: none; /*its hidden on big screens */
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+    right:20px;
+    top:-10px;
+    color: black;
+}
+
+
+@media (max-width:800px){
     .nav{
         flex-direction: column;
         position:absolute;
         padding:20px 0;
         gap: 1rem;
         width:100%;
-        top:100%;
-        left:-100%;
+        top:70px;
+         left:-100%; /*hidden*/
         align-items:center;
         background: #555;
-        transition: top 0.4s ease;
+        transition: left 0.4s ease;
     }
 
     .nav a{
         color: black;
+        font-size: 15px;
+        padding:10px;
     }
 
     .hamburger{
@@ -86,12 +99,15 @@ body {
     }
 
     .nav.active{
-        left:0;
+         left:0; /*visible*/
     }
 }
 
-
-
+@media (max-width:800px){
+     .close-btn{
+        display: block; /*its seen on small screens */
+    }
+}
 
 
 
@@ -240,24 +256,6 @@ margin-bottom:2%;
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -271,8 +269,10 @@ margin-bottom:2%;
     .card{
         width:350px;
     }
-}
 
+
+
+}
 
 /* Menu section */
 
@@ -440,4 +440,78 @@ margin-bottom:2%;
     font-weight: 300;
     text-align: center;
      margin-top: 2%;
+}
+
+
+
+
+@media (max-width:800px){
+h1{
+font-size:2rem;
+}
+
+
+.about-section h2{
+    font-size: 2rem;
+}
+
+.menu-section h2{
+   font-size: 2rem;
+}
+
+.pricing h2{
+    font-size: 2rem;
+}
+
+
+.contact-info h2  {
+    font-size: 2rem;
+    
+}
+
+.contact-map h2{
+    font-size: 2rem;
+}
+
+
+.about-section p{
+    font-size:0.9rem;
+}
+
+}
+
+
+
+
+
+
+
+
+@media (max-width:480px){
+h1{
+font-size:1.3rem;
+}
+
+
+.about-section h2{
+    font-size: 1.2rem;
+}
+
+.menu-section h2{
+   font-size: 1.2rem;
+}
+
+.pricing h2{
+    font-size:1.2rem;
+}
+
+
+.contact-info h2  {
+    font-size: 1.2rem;
+    
+}
+
+.contact-map h2{
+    font-size: 1.2rem;
+}
 }
