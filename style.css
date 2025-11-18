@@ -4,7 +4,9 @@
     box-sizing:border-box;
     font-family: 'poppins', sans-serif;
 }
-
+html, body{
+    height:100%;
+}
 
 body {
  line-height: 1.6;
@@ -428,12 +430,14 @@ margin-bottom:2%;
 
 /* footer section */
 
-.contact{
-    min-height:1000px;
-    text-align: center;
-    background-color: green;
-      padding: 40px 20px;   /*top/bottom, left/right */
-}
+    .contact{
+      align-items: center;
+      background-color: green;
+      color:white;
+      padding: 30px 40px;
+    }
+
+
 .contact-info h2{
       color: white;
     font-size: 3rem;
@@ -582,7 +586,7 @@ font-size:1.3rem;
 
 
     .contact-map iframe{
-        height:50% ;
+        height:80% ;
     }
 
 /* .contact-map { */
