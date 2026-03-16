@@ -13,15 +13,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-<meta name="description" content="place your order for fitmealuganda's healthy meal,mealplans and fresh fast delivery at affordable prices and have a healthy eating in uganda">
-<meta name="url" content="https://FitMeal-Uganda.netlify.app/order">
-<meta name="keyword" content="">
-<meta name="image" content="">
-<meta name="website" content="">
-<meta name="title" content="">
-<meta property="og" content="">
-<a href="canonical"></a>
 
+<meta property="og:description"content="place your order for fitmealuganda's healthy meal,mealplans and fresh fast delivery at affordable prices and have a healthy eating in uganda"">
+<meta property="og:url" content="https://FitMeal-Uganda.netlify.app">
+<meta property="og:title" content="Order healthy meals | FitMeal-Uganda ">
+<meta property="og:type" content="website">
+<meta property="og:website" content="FitMeal-Uganda">
+<meta property="og:image" content="https://fitMeal-Uganda.netlify.app/images/logo.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+
+<link rel="canonical" href="https://fitmeal-uganda.netlify.app/order">
 <!-- breadcrumb schema -->
 <script type="application/Id+json">
   {
@@ -486,11 +488,47 @@ padding:20px 30px;
 <p>Pick your preferred method below:</p>
 </section>
 
+
+<!--  
 <div class="button-container">
 <button class="order-btn watsapp-btn">Order on WatsApp</button>
 <button class="order-btn email-btn">Order via Email</button>
 <button class="order-btn form-btn">Order with Form</button>
 </div>
+-->
+
+
+<div class="button-container">
+
+<button class="order-btn whatsapp-btn">
+Order on WhatsApp
+</button>
+
+<button class="order-btn email-btn">
+Order via Email
+</button>
+
+<button class="order-btn form-btn">
+Order with Form
+</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
 
 <section class="order-form">
@@ -531,16 +569,32 @@ closebtn.addEventListener('click', () =>{
     nav.classList.remove('active');
 })
 
-// 
 
-document.querySelector(".whatsapp-btn").addEventListener("click", function() {
-  window.open("https://wa.me/256772845457?text=Hello%20FitMeal%20Uganda%2C%20I%20would%20like%20to%20make%20an%20order.", "_blank");
+
+const whatsappBtn = document.querySelector(".whatsapp-btn");
+const emailBtn = document.querySelector(".email-btn");
+const formBtn = document.querySelector(".form-btn");
+
+
+// WhatsApp button
+whatsappBtn.addEventListener("click", function(){
+window.open(
+"https://wa.me/256772845457?text=Hello%20FitMeal%20Uganda,%20I%20would%20like%20to%20make%20an%20order.",
+"_blank"
+);
 });
-document.querySelector(".form-btn").addEventListener("click", function(){
-  window.location.href("#order-form")
+
+
+// Email button
+emailBtn.addEventListener("click", function(){
+window.location.href =
+"mailto:nakiyingilindah24@gmail.com?subject=Order%20Request&body=Hello%20FitMeal,%20I%20would%20like%20to%20make%20an%20order.";
 });
-document.querySelector(".email-btn").addEventListener("click", function() {
-  window.location.href = "mailto:fitmealuganda@gmail.com?subject=Order%20Request&body=Hello%20FitMeal,%20I’d%20like%20to%20order%20...";
+
+
+// Form button
+formBtn.addEventListener("click", function(){
+window.location.href = "#order-form";
 });
 
 
