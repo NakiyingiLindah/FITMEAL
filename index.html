@@ -165,10 +165,12 @@ contactType:"CustomerCare"
    },
 ]
 
-
 </script>
 
+<style>
 
+
+</style>
 
 
 </head>
@@ -235,40 +237,66 @@ contactType:"CustomerCare"
     to smoothies and wholesome snacks, all crafted to keep you fit, full, and feeling amazing.
   </p>
 
-<div class="menu-section-content">
+ <div class="menu-section-content">
     <div class="meal-image">
         <img src="images/grilled chicken skewers.jpg" alt="grilled chicken">
-        <p>GRILLED CHICKEN SKEWERS</p>
+        <p class="product-name">GRILLED CHICKEN SKEWERS</p>
+        <input type="number"class="quantity" value="1" min="1" max="10">
+        <button class="order-btn whatsapp-product">
+          Order on WhatsApp
+        </button>
     </div>
 
  <div class="meal-image">
         <img src="images/fruit smoothie.jpg" alt="fruit smoothie">
-        <p>FRUIT SMOOTHIE</p>
+        <p class="product-name">FRUIT SMOOTHIE</p>
+        <input type="number"class="quantity" value="1" min="1" max="10">
+        <button class="order-btn whatsapp-product">
+           Order on WhatsApp
+        </button>
     </div>
+
+   
 
  <div class="meal-image">
         <img src="images/tomato and mozarella.jpg" alt="tomato and mozarella">
-        <p>TOMATO AND MOZARELLA PIZZA</p>
+         <p class="product-name">TOMATO AND MOZARELLA PIZZA</p>
+        <input type="number"class="quantity" value="1" min="1" max="10">
+        <button class="order-btn whatsapp-product">
+           Order on WhatsApp
+        </button>
     </div>
 
 
  <div class="meal-image">
         <img src="images/vegetable fried rice.jpg" alt="vegetable fried rice">
-        <p>VEGETABLE FRIED RICE</p>
+         <p class="product-name">VEGETABLE FRIED RICE</p>
+        <input type="number"class="quantity" value="1" min="1" max="10">
+        <button class="order-btn whatsapp-product">
+           Order on WhatsApp
+        </button>
     </div>
 
 
  <div class="meal-image">
         <img src="images/avocado toast.jpg" alt="avocado toast">
-        <p>AVOCADO TOAST</p>
+         <p class="product-name">AVOCADO TOAST</p>
+        <input type="number"class="quantity" value="1" min="1" max="10">
+        <button class="order-btn whatsapp-product">
+           Order on WhatsApp
+        </button>
     </div>
 
 
  <div class="meal-image">
         <img src="images/crunch vegetable salad.jpg" alt="vegetable salad">
-        <p>CRUNCH VEGETABLE SALAD</p>
+         <p class="product-name">CRUNCH VEGETABLE SALAD</p>
+        <input type="number"class="quantity" value="1" min="1" max="10">
+        <button class="order-btn whatsapp-product">
+           Order on WhatsApp
+        </button>
     </div>
-</div>
+    </div>
 </section>
 
 
@@ -336,6 +364,102 @@ hamburger.addEventListener('click', () =>{
 closebtn.addEventListener('click', () =>{
    nav.classList.remove('active'); //closing nav
 });
+
+
+
+
+
+// javascript to capture product name while using whatsapp
+/*
+const whatsappButtons = document.querySelectorAll(".whatsapp-product");
+
+whatsappButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    const productCard = button.closest(".meal-image");
+    const productName = productCard.querySelector(".product-name").innerText;
+
+    const message = `Hello FitMeal Uganda, I would like to order ${productName}`;
+    const whatsappURL = `https://wa.me/256772845457?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+});
+
+*/
+
+// javascript to capture product name and quantity while using whatsapp
+/*
+const whatsapppoducts = document.querySelectorAll(".whatsapp-product");
+
+whatsapppButtons.forEach((button, function() {
+  button.addEventListener("click", function(){
+
+    const productCard = button.closest(".meal-image");
+
+    const productName = productCard
+      .querySelector(".product-name").innerText;
+
+
+     const quantity = productCard
+     .querySelector (".quantity").value;
+
+    const message = 
+      `Hello FitMeal Uganda, I would like to order ${quantity} ${productName}`;
+
+    const whatsappURL =
+      `https://wa.me/256772845457?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+
+  });
+});
+*/
+
+// Prevent Invalid Typing  min and max, users can still type bad values manually
+// fix it using JavaScript.
+/*
+const quantities = document.querySelectorAll(".quantity");
+quantities.forEach(function(input){
+input.addEventListener("input",function(){
+
+if(input.value < 1)input.value = 1;
+if(input.value > 10)input.value = 10;
+});
+
+input.addEventListener("blur", function(){
+  if(input.value === "" )input.value = 1;
+});
+});
+*/
+
+const whatsappButtons = document.querySelectorAll(".whatsapp-product");
+
+whatsappButtons.forEach(button => {
+  button.addEventListener("click", function(){
+
+    const productCard = button.closest(".meal-image");
+
+    const productName =
+      productCard.querySelector(".product-name").innerText;
+
+    const quantity =
+      productCard.querySelector(".quantity").value;
+
+    const message =
+      `Hello FitMeal Uganda, I would like to order ${quantity} ${productName}`;
+
+    const url =
+      `https://wa.me/256772845457?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+
+  });
+});
+
+
+
+
+
 
 </script>
 

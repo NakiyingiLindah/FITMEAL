@@ -403,7 +403,7 @@ margin-bottom:2%;
     margin-top: 5%;
 }
 
-.pricing-button{
+.pricing-button  {
     justify-content: center;
     text-align: center;
     font-size: 15px;
@@ -417,7 +417,7 @@ margin-bottom:2%;
    cursor:pointer;
    align-items: center;
    /* padding: 20px 40px; */
-   /* padding: 1rem; */
+   /
    
 
 }
@@ -426,6 +426,56 @@ margin-bottom:2%;
    background-color:white ;
    color:green;
 }
+
+.order-btn{
+   justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    background-color: green;
+    border-radius: 12px;
+    border-style: none;
+    width:180px;
+    height:50px;
+    margin-top:2%;
+    margin-bottom:4%;
+   cursor:pointer;
+   align-items: center;
+    /* padding: 1rem;  */
+}
+
+
+
+.order-btn:hover{
+   background-color:white ;
+   color:green;
+}
+
+.quantity{
+  width: 60px;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.meal-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-button{
+    cursor: pointer;
+}
+
+
+
+
+
 
 
 /* footer section */

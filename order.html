@@ -155,6 +155,7 @@ html, body {
       color: white;
       background-color: green;
       text-align: center;
+      cursor: pointer;
     
     }
  .order-form textarea {
@@ -489,15 +490,6 @@ padding:20px 30px;
 </section>
 
 
-<!--  
-<div class="button-container">
-<button class="order-btn watsapp-btn">Order on WatsApp</button>
-<button class="order-btn email-btn">Order via Email</button>
-<button class="order-btn form-btn">Order with Form</button>
-</div>
--->
-
-
 <div class="button-container">
 
 <button class="order-btn whatsapp-btn">
@@ -511,36 +503,52 @@ Order via Email
 <button class="order-btn form-btn">
 Order with Form
 </button>
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </section>
 
+<!--  
 <section class="order-form">
 <h2>Order Form</h2>
 <form action="https://formsubmit.co/nakiyingilindah24@gmail.com" method="POST">
 <input type="text" name="name" placeholder="Your name" required>
-<input type="email" name="email" placeholder="our email" required>
+<input type="email" name="email" placeholder="Your email" required>
 <input type="text" name="meal" placeholder=" meal choice" required>
 <textarea name="message" placeholder="Any special requests" rows="4"></textarea>
-<button class="submit-button">Submit Order</button>
+<button type="submit" class="submit-button">Submit Order</button>
 </form>
 </section>
+-->
+
+
+<section class="order-form">
+  <h2>Order Form</h2>
+
+  <form action="https://formsubmit.co/nakiyingilindah24@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <input type="text" name="meal" placeholder="Meal choice" required>
+      <textarea name="message" placeholder="Any special requests" rows="4"></textarea>
+
+      <!-- Optional hidden inputs -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="thankyou.html">
+
+      <button type="submit" class="submit-button">Submit Order</button>
+  </form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
 
  <footer class="contact">
     <p>&copy; 2025 FitMeal-Uganda. All Rights Reserved</p>
@@ -569,8 +577,6 @@ closebtn.addEventListener('click', () =>{
     nav.classList.remove('active');
 })
 
-
-
 const whatsappBtn = document.querySelector(".whatsapp-btn");
 const emailBtn = document.querySelector(".email-btn");
 const formBtn = document.querySelector(".form-btn");
@@ -593,8 +599,12 @@ window.location.href =
 
 
 // Form button
-formBtn.addEventListener("click", function(){
-window.location.href = "#order-form";
+
+formBtn.addEventListener("click", function() {
+  const form = document.querySelector(".order-form"); // select the section
+  if (form) {
+    form.scrollIntoView({ behavior: "smooth" }); // smooth scroll to form
+  }
 });
 
 
