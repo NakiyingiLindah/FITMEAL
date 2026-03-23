@@ -245,6 +245,11 @@ contactType:"CustomerCare"
         <button class="order-btn whatsapp-product">
           Order on WhatsApp
         </button>
+
+     <button class="order-btn email-product">
+          Order via Email
+        </button>
+
     </div>
 
  <div class="meal-image">
@@ -432,6 +437,9 @@ input.addEventListener("blur", function(){
 });
 */
 
+
+// javascript for product and quantity showup via watsapp
+
 const whatsappButtons = document.querySelectorAll(".whatsapp-product");
 
 whatsappButtons.forEach(button => {
@@ -456,7 +464,17 @@ whatsappButtons.forEach(button => {
   });
 });
 
+// javascript for email button order
+const productEmailButtons = document.querySelectorAll(".email-product");
 
+productEmailButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    const productName = button.closest(".meal-image").querySelector(".product-name").innerText;
+    const subject = encodeURIComponent("Order Request from FitMeal-Uganda");
+    const body = encodeURIComponent(`Hello FitMeal Uganda,\n\nI would like to order: ${productName}\nQuantity: 1\nSpecial requests: `);
+    window.location.href = `mailto:nakiyingilindah24@gmail.com?subject=${subject}&body=${body}`;
+  });
+});
 
 
 
