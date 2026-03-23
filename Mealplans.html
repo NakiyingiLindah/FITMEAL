@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitMeal – Meal Plans</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .mealplan-wrapper{
+        align-items: center;
+        display: flex;
+        gap:30px;
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+
+    h1{
+        float:right;
+    }
+
+.meal-plan{
+        border-radius: 15px;
+        padding:25px 20px ;
+        border-style: 1px solid white;
+        background-color: #f9f9f9;  /* Light background for contrast */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.meal-plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+
+h2{
+ font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 10px;
+ text-align: center;
+}
+
+   .meal-plan h2 {
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 10px;
+ text-align: center;
+}
+
+    .meal-plan ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+}
+
+.meal-plan ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.meal-plan p{
+   font-weight: bold;
+  color: #2a9d8f;  
+  font-size: 1.2rem;
+  margin-bottom: 10px; 
+}
+
+.logo-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.logo{
+    height: auto;
+    width:150px;
+}
+
+
+.page-title {
+  font-size: 4rem;             /* adjust as needed */
+  color: hsl(110, 94%, 31%);
+  margin: 0;
+}
+
+.page-subtitle {
+  font-size:1.3rem;             /* adjust as needed */
+  color: hsl(110, 94%, 31%);
+  margin: 0;
+}
+
+
+@media screen and (max-width :1024px){
+.logo-container{
+    flex-direction: column;
+    text-align: center;
+}
+}
+
+
+@media screen and (max-width :768px){
+.page-title{
+    font-size: 2.4rem;
+}
+}
+
+
+
+@media screen and (max-width :480px){
+.page-title{
+    font-size: 2rem;
+}
+}
+
+@media screen and (max-width :320px){
+.page-title{
+    font-size: 1.8rem;
+}
+}
+
+  </style>
+</head>
+<body>
+
+   <!-- <header class="header-section"> -->
+<div class="logo-container">
+    <img src="images/logo.png" alt="Fitmeal logo" class="logo">
+    <h2 class="page-title">FITMEAL-UGANDA </h2>
+    <p class="page-subtitle">Eat Smart, Live Healthy</p>
+    </div>
+
+
+<h2>OUR MEAL PLANS</h2>
+
+<!-- BASIC PLAN -->
+ <section class="mealplan-wrapper">
+<section id="basic" class="meal-plan">
+  <h2>BASIC PLAN </h2>
+    <p>UGX 30,000</p>
+  <p>1-2 people, simple healthy meals.</p>
+  <ul>
+    <li>Grilled Chicken Skewers</li>
+    <li>Vegetable Fried Rice</li>
+    <li>Avocado Toast</li>
+    <li>Fruit Smoothies</li>
+  </ul>
+</section>
+
+<!-- FAMILY PLAN -->
+<section id="family" class="meal-plan">
+  <h2>FAMILY PLAN </h2>
+   <p>UGX 60,000</p> 
+  <p>2-4 people, balanced meals for the family.</p>
+  <ul>
+    <li>Tomato & Mozzarella Pizza</li>
+    <li>Vegetable Fried Rice</li>
+    <li>Grilled Chicken Skewers</li>
+    <li>Fruit Smoothies</li>
+    <li>Avocado Toast</li>
+  </ul>
+</section>
+
+<!-- PREMIUM PLAN -->
+<section id="premium" class="meal-plan">
+  <h2>PREMIUM PLAN </h2>
+    <p>UGX 90,000</p>
+  <p>3-5 people, premium meals with more variety.</p>
+  <ul>
+    <li>Grilled Chicken Skewers</li>
+    <li>Vegetable Fried Rice</li>
+    <li>Avocado Toast</li>
+    <li>Tomato & Mozzarella Pizza</li>
+    <li>Fruit Smoothies</li>
+    <li>Crunch Vegetable Salad</li>
+  </ul>
+</section>
+</section>
+</body>
+</html>

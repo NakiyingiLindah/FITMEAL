@@ -510,6 +510,7 @@ Order with Form
 <section class="order-form">
 <h2>Order Form</h2>
 <form action="https://formsubmit.co/nakiyingilindah24@gmail.com" method="POST">
+<input type="text" name="plan" id="plan" placeholder="Selected Plan" readonly>
 <input type="text" name="name" placeholder="Your name" required>
 <input type="email" name="email" placeholder="Your email" required>
 <input type="text" name="meal" placeholder=" meal choice" required>
@@ -597,6 +598,13 @@ formBtn.addEventListener("click", function() {
   }
 });
 
+// javascript to capture the meal plan
+const params = new URLSearchParams(window.location.search);
+const plan = params.get("plan");
+
+if(plan){
+  document.getElementById("plan").value = plan + " Plan";
+}
 
 </script>
 

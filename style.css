@@ -361,7 +361,7 @@ margin-bottom:2%;
      display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem; 
+    gap: 1.2rem; 
 }
 
 
@@ -369,7 +369,7 @@ margin-bottom:2%;
   background-color: white;
   border-radius: 12px;
   width: 300px;
-  height: 200px;
+  height: 300px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
