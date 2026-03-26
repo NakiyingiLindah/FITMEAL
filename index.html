@@ -184,10 +184,10 @@ contactType:"CustomerCare"
 <nav class="nav">
    <span class="close-btn">&times;</span> <!--close button-->
  <a href="#hero">HOME</a>
- <a href="#about">ABOUT</a>
- <a href="#menu">MENU</a>
- <a href="#pricing">PRICING</a>
- <a href="#footer">CONTACT</a>
+ <a href="#about.htmk">ABOUT</a>
+ <a href="#menu.html">MENU</a>
+ <a href="#pricing.html">PRICING</a>
+ <a href="#footer.html">CONTACT</a>
 </nav>
 <!-- hamburger -->
 <div class="hamburger">
@@ -241,10 +241,10 @@ contactType:"CustomerCare"
     <div class="meal-image">
         <img src="images/grilled chicken skewers.jpg" alt="grilled chicken">
         <p class="product-name">GRILLED CHICKEN SKEWERS</p>
-        <input type="number"class="quantity" value="1" min="1" max="10">
-        <button class="order-btn whatsapp-product">
-          Order on WhatsApp
-        </button>
+        <!-- <input type="number"class="quantity" value="1" min="1" max="10"> -->
+        <!-- <button class="order-btn whatsapp-product"> -->
+          <!-- Order on WhatsApp -->
+        <!-- </button> -->
 
      <!-- <button class="order-btn email-product">Order via Email</button> -->
 
@@ -253,10 +253,10 @@ contactType:"CustomerCare"
  <div class="meal-image">
         <img src="images/fruit smoothie.jpg" alt="fruit smoothie">
         <p class="product-name">FRUIT SMOOTHIE</p>
-        <input type="number"class="quantity" value="1" min="1" max="10">
-        <button class="order-btn whatsapp-product">
-           Order on WhatsApp
-        </button>
+        <!-- <input type="number"class="quantity" value="1" min="1" max="10"> -->
+        <!-- <button class="order-btn whatsapp-product"> -->
+           <!-- Order on WhatsApp -->
+        <!-- </button> -->
     </div>
 
    
@@ -264,40 +264,40 @@ contactType:"CustomerCare"
  <div class="meal-image">
         <img src="images/tomato and mozarella.jpg" alt="tomato and mozarella">
          <p class="product-name">TOMATO AND MOZARELLA PIZZA</p>
-        <input type="number"class="quantity" value="1" min="1" max="10">
-        <button class="order-btn whatsapp-product">
-           Order on WhatsApp
-        </button>
+        <!-- <input type="number"class="quantity" value="1" min="1" max="10"> -->
+        <!-- <button class="order-btn whatsapp-product"> -->
+           <!-- Order on WhatsApp -->
+        <!-- </button> -->
     </div>
 
 
  <div class="meal-image">
         <img src="images/vegetable fried rice.jpg" alt="vegetable fried rice">
          <p class="product-name">VEGETABLE FRIED RICE</p>
-        <input type="number"class="quantity" value="1" min="1" max="10">
-        <button class="order-btn whatsapp-product">
-           Order on WhatsApp
-        </button>
+        <!-- <input type="number"class="quantity" value="1" min="1" max="10"> -->
+        <!-- <button class="order-btn whatsapp-product"> -->
+           <!-- Order on WhatsApp -->
+        <!-- </button> -->
     </div>
 
 
  <div class="meal-image">
         <img src="images/avocado toast.jpg" alt="avocado toast">
          <p class="product-name">AVOCADO TOAST</p>
-        <input type="number"class="quantity" value="1" min="1" max="10">
-        <button class="order-btn whatsapp-product">
-           Order on WhatsApp
-        </button>
+        <!-- <input type="number"class="quantity" value="1" min="1" max="10"> -->
+        <!-- <button class="order-btn whatsapp-product"> -->
+           <!-- Order on WhatsApp -->
+        <!-- </button> -->
     </div>
 
 
  <div class="meal-image">
         <img src="images/crunch vegetable salad.jpg" alt="vegetable salad">
          <p class="product-name">CRUNCH VEGETABLE SALAD</p>
-        <input type="number"class="quantity" value="1" min="1" max="10">
-        <button class="order-btn whatsapp-product">
-           Order on WhatsApp
-        </button>
+        <!-- <input type="number"class="quantity" value="1" min="1" max="10"> -->
+        <!-- <button class="order-btn whatsapp-product"> -->
+           <!-- Order on WhatsApp -->
+        <!-- </button> -->
     </div>
     </div>
 </section>
@@ -313,7 +313,6 @@ contactType:"CustomerCare"
 <p>BASIC PLAN</p>
 <p><strong> UGX 30000</strong></p>
 <p>1-2 PEOPLE</p>
-<a href="order.html?plan=Basic"><button class="pricing-button">ORDER NOW</button></a>
 <a href="Mealplans.html"><button class="pricing-button">VIEW MEALS</button></a>
     </div>
 
@@ -321,16 +320,16 @@ contactType:"CustomerCare"
 <p>FAMILY PLAN</p>
 <p><strong>UGX 50000</strong></p>
 <p>3-4 PEOPLE</p>
-<a href="order.html?plan=Family"><button class="pricing-button">ORDER NOW</button></a>
 <a href="Mealplans.html"><button class="pricing-button">VIEW MEALS</button></a>
+<!-- <a href="order.html?plan=Family"><button class="pricing-button">ORDER NOW</button></a> -->
     </div>
 
     <div class="pricing-card">
 <p>PREMIUM PLAN</p>
 <p><STROng>UGX 90000</STROng></p>
 <p>5-6 + PEOPLE</p>
-<a href="order.html?plan=premium"><button class="pricing-button">ORDER NOW</button></a>
 <a href="Mealplans.html"><button class="pricing-button">VIEW MEALS</button></a>
+<!-- <a href="order.html?plan=premium"><button class="pricing-button">ORDER NOW</button></a> -->
     </div>
 </div>
 
@@ -349,14 +348,7 @@ contactType:"CustomerCare"
 
 <!-- payment option 2 -->
 <br>
-<br>
-<select name="payment" required>
-<option value="">Select Payment Method</option>
-<option value="mtn">Mtn Mobile Money</option>
-<option value="airtel">AirtelMoney</option>
-<option value="cash">Cash On Delivery</option>
-</select>
-</section>
+
 
 <footer id="footer"class="contact">
 <div class="contact-info">
@@ -464,32 +456,6 @@ input.addEventListener("blur", function(){
 });
 */
 
-
-// javascript for product and quantity showup via watsapp
-
-const whatsappButtons = document.querySelectorAll(".whatsapp-product");
-
-whatsappButtons.forEach(button => {
-  button.addEventListener("click", function(){
-
-    const productCard = button.closest(".meal-image");
-
-    const productName =
-      productCard.querySelector(".product-name").innerText;
-
-    const quantity =
-      productCard.querySelector(".quantity").value;
-
-    const message =
-      `Hello FitMeal Uganda, I would like to order ${quantity} ${productName}`;
-
-    const url =
-      `https://wa.me/256772845457?text=${encodeURIComponent(message)}`;
-
-    window.open(url, "_blank");
-
-  });
-});
 
 // javascript for email button order
 /*

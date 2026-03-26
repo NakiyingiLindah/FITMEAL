@@ -361,7 +361,7 @@ margin-bottom:2%;
      display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.2rem; 
+    gap:2rem; 
 }
 
 
@@ -369,7 +369,7 @@ margin-bottom:2%;
   background-color: white;
   border-radius: 12px;
   width: 300px;
-  height: 300px;
+  height: 250px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
@@ -487,12 +487,17 @@ margin-bottom:2%;
       padding: 30px 40px;
     }
 
+    .contact-map{
+        max-width: 8000px;
+    }
+
+    
 
 .contact-info h2{
       color: white;
     font-size: 3rem;
     font-weight: 500;
-    margin-top:20px;
+    margin-top:10px;
     text-align: center;
 }
   
@@ -608,7 +613,6 @@ font-size:1.3rem;
 
 .contact-map{
     width:100%;
-    /* max-width: 700px; */
     margin: 30px auto;
     position: relative;
     min-height: 300px;
@@ -623,7 +627,7 @@ font-size:1.3rem;
   height: 100%;
   border: 0;
   left: 0;
-  top: 70px;
+  top: 120px;
 }
 
 

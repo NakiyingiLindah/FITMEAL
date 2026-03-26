@@ -24,6 +24,8 @@
 <meta property="og:image:height" content="600">
 
 <link rel="canonical" href="https://fitmeal-uganda.netlify.app/order">
+
+
 <!-- breadcrumb schema -->
 <script type="application/Id+json">
   {
@@ -65,18 +67,7 @@
 }
   }
  </script>
-
-
-
-</script>
 <style>
-
-
-
-
-
-
-
 *{
   padding: 0;
   margin: 0;
@@ -196,9 +187,6 @@ html, body {
    margin-bottom: 20px;
  }
     
-
-
-
 /*  
   button{
       font-size: 1.2rem;
@@ -457,38 +445,38 @@ padding:20px 30px;
 
 </style>
 
-</head>
-<body>
-    <header class="header-section">
-    <div class="logo">
-      <img src="images/logo.png" alt=" order page logo image">
+ <header class="header-section">
+<div class="logo">
+    <img src="images/logo.png" alt="logo image">
     </div>
-    <nav class="nav">
-      <span class="close-btn">&times;</span>
-      <a href="index.html">HOME</a>
-      <a href="index.html#about">ABOUT</a>
-      <a href="index.html#menu">MENU</a>
-      <a href="index.html#pricing">PRICING</a>
-      <a href="index.html#footer">CONTACT</a>
-    </nav>
+<nav class="nav">
+  <span class="close-btn">&times;</span>
 
-    <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-    </div>
-  </header>
-  
-  <section class="order-hero">
-<h1>Place Your Order</h1>
+  <a href="index.html#hero">HOME</a>
+  <a href="index.html#about">ABOUT</a>
+  <a href="index.html#menu">MENU</a>
+  <a href="index.html#pricing">PRICING</a>
+  <a href="index.html#footer">CONTACT</a>
+</nav>
+
+<!-- hamburger -->
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</header> 
+
+
+
+<section class="order-hero">
+  <h1>Place Your Order</h1>
 <p>Choose how you would like to order - quick, easy and flexible</p>
-  
 
-<section class="order-options">
-<h2>How would you like to order</h2>
+<div class="order-options">
+<h1>How would you like to order</h1>
 <p>Pick your preferred method below:</p>
-</section>
-
+</div>
 
 <div class="button-container">
 
@@ -503,53 +491,33 @@ Order via Email
 <button class="order-btn form-btn">
 Order with Form
 </button>
+
 </div>
 </section>
 
-
-<section class="order-form">
-<h2>Order Form</h2>
-<form action="https://formsubmit.co/nakiyingilindah24@gmail.com" method="POST">
-<input type="text" name="plan" id="plan" placeholder="Selected Plan" readonly>
-<input type="text" name="name" placeholder="Your name" required>
-<input type="email" name="email" placeholder="Your email" required>
-<input type="text" name="meal" placeholder=" meal choice" required>
-<textarea name="message" placeholder="Any special requests" rows="4"></textarea>
-<button type="submit" class="submit-button">Submit Order</button>
-<br>
-<br>
-<select name="Payment "required>
-  <option value="">Select Payment Method</option>
-  <option value="mtn">MTN Mobile Money</option>
-  <option value="airtel">Airtel Money</option>
-  <option value="cash">Cash On Delivery</option>
-</select>
-</form>
-
-
-
-</section>
-
-<!--  
 <section class="order-form">
   <h2>Order Form</h2>
-
-  <form action="https://formsubmit.co/nakiyingilindah24@gmail.com" method="POST">
+  <form action="https://formsubmit.co/nakiyingilindah24@gmail.com"method="POST">
+     <input type="text" name="plan" id="plan" placeholder="Selected Plan" readonly>
       <input type="text" name="name" placeholder="Your name" required>
       <input type="email" name="email" placeholder="Your email" required>
       <input type="text" name="meal" placeholder="Meal choice" required>
       <textarea name="message" placeholder="Any special requests" rows="4"></textarea>
 
-      Optional hidden inputs
+      <!-- Optional hidden inputs -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="thankyou.html">
-
+              <br>
+      <select name="payment"required>
+        <option value="">Select Payment Method</option>
+     <option value="airtel">Airtel Money</option>
+     <option value="mtn">MTN Mobile Money</option>
+     <option value="cash">Cash On Delivery</option>
+      </select>
       <button type="submit" class="submit-button">Submit Order</button>
   </form>
 </section>
-
- -->
 
 
  <footer class="contact">
@@ -558,11 +526,12 @@ Order with Form
 
     
 <div class="footer-links">
-  <a href="/">Home</a>
-   <a href="/about">About</a>
-    <a href="/menu">Menu</a>
-   <a href="/pricing">Pricing</a>
-  <a href="/contact">Contact</a>
+  <a href="index.html#hero">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#menu">Menu</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="index.html#footer">Contact</a>
+</nav>
 </div>
 
 
@@ -579,37 +548,57 @@ closebtn.addEventListener('click', () =>{
     nav.classList.remove('active');
 })
 
+
+// Buttons
 const whatsappBtn = document.querySelector(".whatsapp-btn");
 const emailBtn = document.querySelector(".email-btn");
 const formBtn = document.querySelector(".form-btn");
 
+// Get form fields
+const nameInput = document.querySelector('input[name="name"]');
+const mealInput = document.querySelector('input[name="meal"]');
+const planInput = document.getElementById("plan");
 
-// WhatsApp button
+// WhatsApp button (SMART)
 whatsappBtn.addEventListener("click", function(){
-window.open(
-"https://wa.me/256772845457?text=Hello%20FitMeal%20Uganda,%20I%20would%20like%20to%20make%20an%20order.",
-"_blank"
-);
+
+  const name = nameInput.value || "Customer";
+  const meal = mealInput.value || "a meal";
+  const plan = planInput.value || "a plan";
+
+  const message = `Hello FitMeal Uganda, my name is ${name}. I would like to order the ${plan} with ${meal}.`;
+
+  window.open(
+    `https://wa.me/256772845457?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
 });
 
 
-// Email button
+// Email button (also smart)
 emailBtn.addEventListener("click", function(){
-window.location.href =
-"mailto:nakiyingilindah24@gmail.com?subject=Order%20Request&body=Hello%20FitMealUganda,%20I%20would%20like%20to%20make%20an%20order.";
+
+  const name = nameInput.value || "Customer";
+  const meal = mealInput.value || "a meal";
+  const plan = planInput.value || "a plan";
+
+  const subject = "Order Request";
+  const body = `Hello FitMeal Uganda,%0D%0A%0D%0AMy name is ${name}. I would like to order the ${plan} with ${meal}.`;
+
+  window.location.href = `mailto:nakiyingilindah24@gmail.com?subject=${subject}&body=${body}`;
 });
 
 
-// Form button
-
+// Scroll to form
 formBtn.addEventListener("click", function() {
-  const form = document.querySelector(".order-form"); // select the section
+  const form = document.querySelector(".order-form");
   if (form) {
-    form.scrollIntoView({ behavior: "smooth" }); // smooth scroll to form
+    form.scrollIntoView({ behavior: "smooth" });
   }
 });
 
-// javascript to capture the meal plan
+
+// Capture plan from URL
 const params = new URLSearchParams(window.location.search);
 const plan = params.get("plan");
 
@@ -617,7 +606,9 @@ if(plan){
   document.getElementById("plan").value = plan + " Plan";
 }
 
+
 </script>
 
 </body>
+
 </html>

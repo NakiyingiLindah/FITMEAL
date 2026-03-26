@@ -9,6 +9,7 @@
   <style>
     .mealplan-wrapper{
         align-items: center;
+        /* text-align: center; */
         display: flex;
         gap:30px;
         margin: 0 auto;
@@ -16,18 +17,19 @@
         padding: 40px 20px;
         flex-direction: column;
     }
-
+/*
     h1{
         float:right;
-    }
+     } */
 
 .meal-plan{
         border-radius: 15px;
         padding:25px 20px ;
         border-style: 1px solid white;
-        background-color: #f9f9f9;  /* Light background for contrast */
+        /* background-color: #f9f9f9;  Light background for contrast */
         box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         transition: transform 0.3s, box-shadow 0.3s;
+        background-color: white;
 }
 
 .meal-plan:hover {
@@ -38,14 +40,16 @@
 
 h2{
  font-size: 1.8rem;
-  color: #333333;
+  /* color: #333333; */
+  color: green;
   margin-bottom: 10px;
  text-align: center;
 }
 
    .meal-plan h2 {
   font-size: 1.8rem;
-  color: #333333;
+  /* color: #333333; */
+  color: green;
   margin-bottom: 10px;
  text-align: center;
 }
@@ -53,7 +57,8 @@ h2{
     .meal-plan ul {
   list-style-type: disc;
   padding-left: 20px;
-  color: #444;
+  /* color: #444; */
+  color: green;
 }
 
 .meal-plan ul li {
@@ -63,7 +68,8 @@ h2{
 
 .meal-plan p{
    font-weight: bold;
-  color: #2a9d8f;  
+  /* color: #2a9d8f;   */
+  color: green;
   font-size: 1.2rem;
   margin-bottom: 10px; 
 }
@@ -92,6 +98,26 @@ h2{
   font-size:1.3rem;             /* adjust as needed */
   color: hsl(110, 94%, 31%);
   margin: 0;
+}
+
+  .footer-links a{
+font-size: 0.7rem;
+margin:0 3px;
+}
+
+.footer-links{
+text-align: center;
+margin-top: 20px;
+padding:20px 30px;
+}
+
+
+.footer-links a{
+  text-decoration: none;
+  list-style-type: none;
+  color: green;
+  font-size:1rem;
+  margin: 0 10px;
 }
 
 
@@ -149,6 +175,10 @@ h2{
     <li>Avocado Toast</li>
     <li>Fruit Smoothies</li>
   </ul>
+
+ <div class="button-container">
+  <a href="order.html?plan=Basic"><button class="pricing-button">ORDER NOW</button></a>
+  </div>
 </section>
 
 <!-- FAMILY PLAN -->
@@ -163,6 +193,9 @@ h2{
     <li>Fruit Smoothies</li>
     <li>Avocado Toast</li>
   </ul>
+ <div class="button-container">
+  <a href="order.html?plan=Family"><button class="pricing-button">ORDER NOW</button></a>
+  </div>
 </section>
 
 <!-- PREMIUM PLAN -->
@@ -178,7 +211,74 @@ h2{
     <li>Fruit Smoothies</li>
     <li>Crunch Vegetable Salad</li>
   </ul>
+ <div class="button-container">
+  <a href="order.html?plan=Premium"><button class="pricing-button">ORDER NOW</button></a>
+  </div>
 </section>
 </section>
+
+
+
+ <footer class="contact">
+    <p>&copy; 2025 FitMeal-Uganda. All Rights Reserved</p>
+  </footer>
+
+    
+<div class="footer-links">
+  <a href="index.html#hero">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#menu">Menu</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="index.html#footer">Contact</a>
+</div>
 </body>
+<script>
+
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
+const closebtn = document.querySelector('.close-btn')
+
+hamburger.addEventListener('click', () =>{
+  nav.classList.toggle('active');    // opening nav
+});
+
+closebtn.addEventListener('click', () =>{
+   nav.classList.remove('active'); //closing nav
+});
+
+
+
+
+
+
+
+
+
+// javascript for product and quantity showup via watsapp
+
+const whatsappButtons = document.querySelectorAll(".whatsapp-product");
+
+whatsappButtons.forEach(button => {
+  button.addEventListener("click", function(){
+
+    const productCard = button.closest(".meal-image");
+
+    const productName =
+      productCard.querySelector(".product-name").innerText;
+
+    const quantity =
+      productCard.querySelector(".quantity").value;
+
+    const message =
+      `Hello FitMeal Uganda, I would like to order ${quantity} ${productName}`;
+
+    const url =
+      `https://wa.me/256772845457?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+
+  });
+});
+
+</script>
 </html>
